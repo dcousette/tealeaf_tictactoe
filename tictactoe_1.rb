@@ -1,8 +1,7 @@
-board = {}
-
-def initialize_board(b)
-  (1..9).each {|position| b[position] = " " }
-  b 
+def initialize_board
+  board = {}
+  (1..9).each {|position| board[position] = " " }
+  board
 end
 
 def draw_board(b)
@@ -14,13 +13,13 @@ def draw_board(b)
 end
 
 def player_picks_square(b)
-    begin
-      puts "Pick a square (1 - 9):"
-      position = gets.chomp.to_i
-        if !open_squares(b).include?(position)
-          puts "Oops! Try again you fool!"
-        end
-    end until open_squares(b).include?(position)
+  begin
+    puts "Pick a square (1 - 9):"
+    position = gets.chomp.to_i
+      if !open_squares(b).include?(position)
+        puts "Oops! Try again you fool!"
+      end
+  end until open_squares(b).include?(position)
   b[position] = "X"
 end 
 
@@ -43,7 +42,7 @@ def check_for_winner(b)
   nil 
 end
 
-initialize_board(board)
+board = initialize_board
 draw_board(board)
   
 begin 

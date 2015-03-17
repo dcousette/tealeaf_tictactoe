@@ -1,0 +1,8 @@
+#questions
+ 
+ 
+I understand that using setters and getters is best practice for instance variables, 
+but what about using @variables for object names. Is this done instead of local variables 
+so the object can be accessed throughout the class and not just the init method?
+This confused me a bit in the Game class on Tictactoe.
+
